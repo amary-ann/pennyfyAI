@@ -1,0 +1,10 @@
+langchain
+mysql-connector-python
+pyodbc
+langchain-core
+langchain-openai
+langchain-chroma
+faiss-cpu
+fastapi[standard]
+langchain-community
+asyncpg
