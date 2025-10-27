@@ -7,6 +7,7 @@ subscription_key = os.getenv("AZURE_OPENAI_API_KEY", "your-azure-key") # replace
 endpoint = os.getenv("AZURE_OPENAI_ENDPOINT", "https://your-resource-name.openai.azure.com/") # replace with your endpoint
 deployment = os.getenv("DEPLOYMENT_NAME", "deployment-name") # replace with your deployment name
 embed_deployment = os.getenv("EMBED_DEPLOYMENT")
+embed_endpoint = os.getenv("AZURE_OPENAI_EMBED_ENDPOINT")
 
 DB_CONFIG = {
     "host": os.getenv("PG_HOST"),
