@@ -1,11 +1,11 @@
 from langchain_openai import AzureOpenAIEmbeddings
 import os
-from config import subscription_key
+from config import subscription_key, endpoint, embed_deployment
 class VectorStore:
     def __init__(self):
         self.embeddings = AzureOpenAIEmbeddings(
-            azure_endpoint="https://pennyfy-ai.openai.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2023-05-15",
-            azure_deployment="text-embedding-ada-002",
+            azure_endpoint=endpoint,
+            azure_deployment=embed_deployment,
             api_key=subscription_key,
             api_version="2024-06-01"
         )
