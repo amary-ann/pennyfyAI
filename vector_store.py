@@ -1,15 +1,13 @@
-import faiss
-import numpy as np
-from openai import AzureOpenAI
-from config import openai_api_key, endpoint, subscription_key
-
+from langchain_openai import AzureOpenAIEmbeddings
+import os
+from config import subscription_key
 class VectorStore:
-    def __init__(self, embedding_model="text-embedding-3-large"):
-        self.embedding_model = embedding_model
-        self.client = AzureOpenAI(
-            api_version="2024-12-01-preview",
-            azure_endpoint=endpoint,
+    def __init__(self):
+        self.embeddings = AzureOpenAIEmbeddings(
+            azure_endpoint="https://pennyfy-ai.openai.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2023-05-15",
+            azure_deployment="text-embedding-ada-002",
             api_key=subscription_key,
+            api_version="2024-06-01"
         )
         # Cache to avoid recomputing embeddings
         self.embedding_cache = {}
