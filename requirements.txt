@@ -1,4 +1,3 @@
-langchain
 mysql-connector-python
 pyodbc
 langchain-core
@@ -10,7 +9,6 @@ langchain-community
 asyncpg
 psycopg2
 
-fastapi==0.103
 pydantic==2.8.0
 pydantic-settings==2.4.0
 python-dotenv==1.0.0
