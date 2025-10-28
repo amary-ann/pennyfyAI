@@ -132,6 +132,3 @@ async def send_message(request: Request):
     else: 
         return {'response' : "Error getting a response!!!" }
     
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="localhost", port=8000)
