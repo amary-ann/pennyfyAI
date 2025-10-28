@@ -14,5 +14,5 @@ DB_CONFIG = {
     "user": os.getenv("PG_USER"),
     "password": os.getenv("PG_PWD"),
     "database": os.getenv("PG_DB"),
-    "port": os.getenv("PORT"),
+    "port": 5432,
 }
